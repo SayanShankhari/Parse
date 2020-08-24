@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Parser</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body onload="init()">
+		<textarea id="textarea"></textarea>
+		<br />
+		<button id="button">Parse</button>
+
+		<script>
+			function init() {
+				button = document.getElementById ("button");
+				button.addEventListener ("click", function() {
+					let code = document.getElementById ("textarea").value;
+					if (code.length > 0) {
+						parseString_HTML (code);
+					}
+				}, false);
+			}
+		</script>
+	</body>
+</html>
